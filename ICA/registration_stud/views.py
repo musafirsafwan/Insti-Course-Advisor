@@ -8,7 +8,7 @@ def register_stud(request) :
 		form = UserCreationForm(request.POST)
 		if form.is_valid() :
 			new_user = form.save()
-			return HttpResponseRedirect("")
+			return HttpResponseRedirect("/success/")
 	else :
 		form = UserCreationForm()
 	return render(request,"registration/stud.html", {
